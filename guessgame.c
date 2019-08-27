@@ -4,6 +4,17 @@
 
 int main() {
 
+    printf("################################################################\n");
+    printf("     ______                         ______                      \n");
+    printf("    / ____/_  _____  __________    / ____/___ _____ ___  ___    \n");
+    printf("   / / __/ / / / _ \\/ ___/ ___/   / / __/ __ `/ __ `__ \\/ _ \\   \n");
+    printf("  / /_/ / /_/ /  __(__  |__  )   / /_/ / /_/ / / / / / /  __/   \n");
+    printf("  \\____/\\__,_/\\___/____/____/    \\____/\\__,_/_/ /_/ /_/\\___/    \n");
+    printf("\n");
+    printf("    Welcome to Guess Game. Try to hit a number from 1 to 100.   \n");
+    printf("\n");
+    printf("################################################################\n");
+
     int guess;
     int hit;
     int level;
@@ -14,8 +25,12 @@ int main() {
     srand(time(0));
     int secretnumber = rand() % 100;
 
+    printf("\n");
     printf("Choose a dificulty level:\n");
-    printf("(1) Easy (2) Default (3) Hard\n\n");
+    printf("\n");
+    printf("(1) Easy    -> 20 guesses\n");
+    printf("(2) Medium  -> 15 guesses\n");
+    printf("(3) Hard    -> 7 guesses\n");
     printf("Your choice is: ");
 
     scanf("%d", &level);
@@ -28,7 +43,7 @@ int main() {
             totaltries = 15;
             break;
         default:
-            totaltries = 6;
+            totaltries = 7;
             break;
     }
 
